@@ -78,11 +78,11 @@ def main():
                 logger.debug("waiting for the download...")
                 time.sleep(20)
                 return
-            #raws = unzip_markdown_archive(markdown_zip_path)
+            raws = unzip_markdown_archive(markdown_zip_path)
             #save_markdowns(git_path / "markdown", raws)
             unzip_and_save_json_archive(json_zip_path, git_path / "json")
 
-    #formatted = format_markdown(read_markdown_directory(git_path / "markdown"))
+    formatted = format_markdown(read_markdown_directory(git_path / "markdown"))
     #save_markdowns(git_path / "formatted", formatted)
 
     if repo is not None:
