@@ -236,7 +236,10 @@ def scrap(markdown_zip_path: Path, json_zip_path: Path, config: Config):
     markdown_zip_path = Path(markdown_zip_path)
     json_zip_path = Path(json_zip_path)
 
-    tasks = [download_rr_archive("markdown", Path(markdown_zip_path), config=config),
+    #tasks = [download_rr_archive("markdown", Path(markdown_zip_path), config=config),
+    #         download_rr_archive("json", Path(json_zip_path), config=config),
+    #         ]
+    tasks = [
              download_rr_archive("json", Path(json_zip_path), config=config),
              ]
     # Register to always kill child process when the script close, to not have zombie process.
